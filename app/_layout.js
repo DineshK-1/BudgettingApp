@@ -1,8 +1,6 @@
-import { SplashScreen, Stack, Tabs } from "expo-router";
-import { MaterialIcons } from '@expo/vector-icons';
+import { Stack } from "expo-router";
 import { SecureStore } from "expo-secure-store";
 import { ClerkProvider, useAuth } from "@clerk/clerk-expo";
-import { useEffect } from "react";
 import LoginPage from "./(modals)/login";
 
 export default function LayoutContext() {
@@ -41,19 +39,8 @@ function Layout() {
     }
 
     return (
-
-        <Tabs screenOptions={{
-            tabBarActiveTintColor: "#ff0000",
-            headerShown: false,
-        }}>
-            <Tabs.Screen name="Wallets" options={{
-                tabBarLabel: "Wallet",
-                tabBarIcon: ({ color, size }) => <MaterialIcons name="account-balance-wallet" size={size} color={color} />
-            }} ></Tabs.Screen>
-            <Tabs.Screen name="Profile" options={{
-                tabBarLabel: "Account",
-                tabBarIcon: ({ color, size }) => <MaterialIcons name="account-circle" size={size} color={color} />
-            }} />
-        </Tabs>
+        <Stack>
+            <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+        </Stack>
     )
 }

@@ -2,7 +2,7 @@ import { SignedIn, useAuth, useUser } from "@clerk/clerk-expo";
 import { View, Text } from "react-native";
 import { TextInput, TouchableOpacity } from "react-native-gesture-handler";
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { colors, globalStyles } from "../constants/COLORS";
+import { colors, globalStyles } from "../../constants/COLORS";
 
 export default function ProfilePage() {
     const { isLoaded, isSignedIn, user } = useUser();
