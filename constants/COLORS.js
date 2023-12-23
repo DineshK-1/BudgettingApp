@@ -10,5 +10,11 @@ export const globalStyles = {
         color: "#fff",
         padding: 15,
         borderRadius: 10,
+    },
+    inputStd: {
+        borderRadius: 15,
+        padding: 10,
+        borderColor: colors.secondary,
+        borderWidth: 2
     }
 }

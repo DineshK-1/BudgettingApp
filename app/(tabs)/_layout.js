@@ -1,9 +1,6 @@
 import { SplashScreen, Stack, Tabs } from "expo-router";
 import { MaterialIcons } from '@expo/vector-icons';
-import { ClerkProvider, useAuth } from "@clerk/clerk-expo";
-import { Ionicons } from '@expo/vector-icons';
-import { useEffect } from "react";
-import { TouchableOpacity } from "react-native-gesture-handler";
+import { useAuth } from "@clerk/clerk-expo";
 import LoginPage from "../(modals)/login";
 import { colors } from "../../constants/COLORS";
 
@@ -29,6 +26,13 @@ export default function Layout() {
             <Tabs.Screen name="Profile" options={{
                 tabBarLabel: "Account",
                 tabBarIcon: ({ color, size }) => <MaterialIcons name="account-circle" size={size} color={color} />
+            }} />
+            <Stack.Screen name="(modals)/addEntry" options={{
+                href: null,
+                presentation: "modal",
+                headerShown: true,
+                headerTitle: "Add a transaction",
+                headerTitleAlign: "center"
             }} />
         </Tabs>
     )

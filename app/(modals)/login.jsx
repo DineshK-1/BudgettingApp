@@ -7,8 +7,8 @@ import { colors } from "../../constants/COLORS";
 export default function LoginPage() {
     const { signIn, setActive, isLoaded } = useSignIn();
 
-    const [emailAddress, setEmailAddress] = React.useState("");
-    const [password, setPassword] = React.useState("");
+    const [emailAddress, setEmailAddress] = React.useState("test@gmail.com");
+    const [password, setPassword] = React.useState("test");
 
     const onSignInPress = async () => {
         if (!isLoaded) {

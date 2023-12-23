@@ -4,9 +4,12 @@ import TransactionComponent from "../../components/transaction";
 import { SafeAreaView } from 'react-native-safe-area-context';
 import AccountsButton from "../../components/accountsButton";
 import { Ionicons } from '@expo/vector-icons';
-import { colors } from "../../constants/COLORS";
+import { Link, useRouter } from "expo-router";
 
 export default function WalletsPage() {
+
+    const router = useRouter();
+
     return (
         <>
             <TouchableOpacity style={{
@@ -19,7 +22,7 @@ export default function WalletsPage() {
                 right: 10,
                 alignItems: "center",
                 justifyContent: "center"
-            }} >
+            }} onPress={() => router.push("/(modals)/addEntry")} >
                 <Ionicons name="add" size={24} color="black" />
             </TouchableOpacity>
 
